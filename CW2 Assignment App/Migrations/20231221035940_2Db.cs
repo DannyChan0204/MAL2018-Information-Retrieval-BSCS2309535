@@ -5,7 +5,7 @@
 namespace CW2_Assignment_App.Migrations
 {
     /// <inheritdoc />
-    public partial class intialDb : Migration
+    public partial class _2Db : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

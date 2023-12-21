@@ -3,6 +3,7 @@ using CW2_Assignment_App.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CW2_Assignment_App.Migrations
 {
     [DbContext(typeof(UserDBContext))]
-    partial class UserDBContextModelSnapshot : ModelSnapshot
+    [Migration("20231221051001_4Db")]
+    partial class _4Db
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,58 +44,6 @@ namespace CW2_Assignment_App.Migrations
                     b.HasKey("BadgesID");
 
                     b.ToTable("Badges", "CW2");
-                });
-
-            modelBuilder.Entity("CW2_Assignment_App.Model.Comments", b =>
-                {
-                    b.Property<string>("CommentsID")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProfileID")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TrailID")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("CommentsID");
-
-                    b.ToTable("Comments", "CW2");
-                });
-
-            modelBuilder.Entity("CW2_Assignment_App.Model.Leaderboard", b =>
-                {
-                    b.Property<string>("LeaderboardID")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("FriendsRanking")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("GlobalRanking")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProfileID")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TimeTaken")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TrailID")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("LeaderboardID");
-
-                    b.ToTable("Leaderboard", "CW2");
                 });
 
             modelBuilder.Entity("CW2_Assignment_App.Model.Profile", b =>

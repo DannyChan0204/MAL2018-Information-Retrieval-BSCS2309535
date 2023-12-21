@@ -13,6 +13,11 @@ namespace CW2_Assignment_App.Model
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Profile> Profile { get; set; }
+        public DbSet <Badges> Badges { get; set; }
+        public DbSet<Trail> Trail { get; set; }
+        public DbSet<Leaderboard> Leaderboard { get; set; }
+        public DbSet<Comments> Comments { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -28,6 +33,11 @@ namespace CW2_Assignment_App.Model
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().ToTable("Users", schema: "CW2");
+            modelBuilder.Entity<Profile>().ToTable("Profile", schema: "CW2");
+            modelBuilder.Entity<Badges>().ToTable("Badges", schema: "CW2");
+            modelBuilder.Entity<Trail>().ToTable("Trail", schema: "CW2");
+            modelBuilder.Entity<Leaderboard>().ToTable("Leaderboard", schema: "CW2");
+            modelBuilder.Entity<Comments>().ToTable("Comments", schema: "CW2");
         }
     }
 }
