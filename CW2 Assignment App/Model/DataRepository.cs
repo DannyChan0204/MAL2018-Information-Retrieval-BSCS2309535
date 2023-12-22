@@ -57,36 +57,6 @@ namespace CW2_Assignment_App.Model
             return db.Profile.Where(x => x.profileID == Id).FirstOrDefault();
         }
 
-        public List<User> AddProfile(User user)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<User> IDataRepository.GetProfile()
-        {
-            throw new NotImplementedException();
-        }
-
-        public User PutProfile(User user)
-        {
-            throw new NotImplementedException();
-        }
-
-        User IDataRepository.GetProfileById(string Id)
-        {
-            throw new NotImplementedException();
-        }
-
-        void IDataRepository.PutProfile(Profile profile)
-        {
-            throw new NotImplementedException();
-        }
-
-        void IDataRepository.AddProfile(Profile profile)
-        {
-            throw new NotImplementedException();
-        }
-
         //Badges--------------------------------------------------------------
         public List<Badges> GetBadges() => db.Badges.ToList();
 
@@ -188,6 +158,26 @@ namespace CW2_Assignment_App.Model
         public Comments GetCommentsById(string Id)
         {
             return db.Comments.Where(x => x.CommentsID == Id).FirstOrDefault();
+        }
+
+        public List<Profile> AddProfile(User user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Profile PutProfile(User user)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IDataRepository.PutProfile(Profile profile)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IDataRepository.AddProfile(Profile profile)
+        {
+            throw new NotImplementedException();
         }
     }
 }

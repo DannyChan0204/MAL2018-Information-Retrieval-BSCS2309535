@@ -7,7 +7,6 @@ namespace CW2_Assignment_App.Model
     public class Profile
     {
         public string profileID { get; set; }
-
         public string userID { get; set; }
         public string name { get; set; }
         public string age { get; set; }

@@ -12,11 +12,11 @@ namespace CW2_Assignment_App.Model
 
 
         //profile---------------------------------------------------
-        List<User> AddProfile(User user);
-        List<User> GetProfile();
-        User PutProfile(User user);
+        List<Profile> AddProfile(User user);
+        List<Profile> GetProfile();
+        Profile PutProfile(User user);
 
-        User GetProfileById(string Id);
+        Profile GetProfileById(string Id);
         void PutProfile(Profile profile);
         void AddProfile(Profile profile);
 
